@@ -17,7 +17,7 @@ class Tieba11Spider(scrapy.Spider):
     def parse(self, response):
         self.page += 1
         print(f"第{self.page}页")
-        # print(response.text)
+        # print(response.text).
 
         ls = response.xpath('//ul[@id="thread_list"]/li[@class=" j_thread_list clearfix"]')
         print(len(ls))
