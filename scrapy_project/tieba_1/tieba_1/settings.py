@@ -14,7 +14,7 @@ SPIDER_MODULES = ['tieba_1.spiders']  # Scrapy搜索spider的模块列表 默认
 NEWSPIDER_MODULE = 'tieba_1.spiders'  # 使用 genspider 命令创建新spider的模块。默认: 'xxx.spiders'
 
 # 通过在用户代理上标识您自己（和您的网站）来负责地爬行
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'
+# USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'
 
 # Obey robots.txt rules (遵守robots.txt规则)
 ROBOTSTXT_OBEY = False
@@ -52,9 +52,11 @@ ROBOTSTXT_OBEY = False
 
 # 启用或禁用下载器中间件
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'tieba_1.middlewares.Tieba1DownloaderMiddleware': 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+   # 'tieba_1.middlewares.Tieba1DownloaderMiddleware': 543,
+    'tieba_1.middlewares.UserAgentMiddleware': 543,
+    # 'tieba_1.middlewares.ProxyIpMiddleware': 553,
+}
 
 # 启用或禁用扩展
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
