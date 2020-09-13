@@ -8,6 +8,7 @@ import pymysql
 from fake_useragent import UserAgent
 # ++++
 # +++++
+# ++++++
 try:
     # 数据存储 mysql
     conn = pymysql.connect(host='localhost', port=3306, user="root", password="914673123", database="xiaoshuo")
