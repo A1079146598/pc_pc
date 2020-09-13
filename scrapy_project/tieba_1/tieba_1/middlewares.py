@@ -50,7 +50,7 @@ class ProxyIpMiddleware:
         初始化
         '''
         self.orderno = "ZF20209467227t2tXw"  # 订单号
-        self.secret = "9129e49ebd314946b0078c39d6acf782"  # 秘钥
+        self.secret = "9129e49ebd314946b0078c39d6acf782"  # 秘钥.
 
     def process_request(self, request, spider):
         print('===ProxyIpMiddleware process_request===')
