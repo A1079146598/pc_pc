@@ -1,0 +1,26 @@
+ 1.建爬虫项目  scrapy startproject xxx
+            1.terminal下
+            2.cd C:\Users\qx\Desktop\pc_pc\scrapy_project
+            3.scrapy startproject xxx
+            setting 配置:
+                1.# 是否遵循爬虫协议
+                    ROBOTSTXT_OBEY = False
+                2.# 启动管道 items   0-1000 (值越小越优先处理)
+                    ITEM_PIPELINES = {
+                       'proj_001.pipelines.Proj001CsvPipeline': 300,
+                    }
+                3.USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'
+
+
+
+        2.明确目标   编写 items.py
+
+        3.制作爬虫    spiders/xxspider.py
+            1.terminal下
+            2.cd D:\f1\pacong\new_day\scrapy_kuangjia\proj_001
+            2.scrapy genspider 名字 域名
+                >>  scrapy genspider 001 search.97973.com
+            4.启动 scrapy crawl 名字  [也可以通过设置run.py 来启动]
+                >>  scrapy crawl 001
+
+        4.存储内容   pipelines.py
